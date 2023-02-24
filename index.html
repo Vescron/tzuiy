@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tzuiy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+    <style>
+        html{
+            height: 100%;
+            width: 100%;
+            background-color: #6E665C;
+            overflow: hidden;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            place-content: center;
+        }
+        .card{
+            aspect-ratio: 1/1;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            align-items: center;
+            border: #9d9d9d solid;
+            font-family: 'Source Sans Pro', sans-serif;
+            border-radius: 10px;
+            padding: 0px 180px;
+            /* padding-block: 100px; */
+            opacity: 0;
+            filter: blur(10px);
+            background-color: #C9C9C9;
+            animation: fade-up 1.5s forwards;
+            font-size: 1vw;
+            color: #6c6b6b;
+            transition: all 1s;
+        }
+        .card:hover{
+            cursor:default;
+            padding: 200px 300px;
+        }
+        .pfp{
+            display: grid;
+            place-content: center;
+            transform: translateY(-20px);
+        }
+        h1{
+            font-size: 3vw;
+        }
+        #pfp{
+            height: auto;
+            border: #9d9d9d solid;
+            border-radius: 10px;
+            width: 15vw;
+            transition: all 1s;
+        }
+        #pfp:hover{
+            box-shadow: 0px 0px 50px #9d9d9d;
+        }
+        li{
+            display: inline-block;
+            list-style:none ;
+            padding: 10px 10px;
+            border-radius: 100px;
+            margin-inline-start: 10px;
+            border: 2px #9d9d9d solid;
+            transition: all 500ms;
+        }
+        li a{
+            text-decoration: none;
+            color:#878787;
+            cursor: default;
+        }
+        li:hover{
+            box-shadow: 0px 0px 10px #6E665C;
+        }
+        .About{
+            position: relative;
+            margin-bottom: 0px;
+            transform: translateY(3vw);
+        }
+
+        .links{
+            transform: translateY(3vw);
+            display: inline-block;
+        }
+        #about::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #C9C9C9;
+            animation: type 4s 1s ease forwards;
+        }
+        @keyframes type {
+            to{
+                left: 100%;
+            }
+            
+        }
+        @keyframes fade-up {
+            to{
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+            
+        }
+        @media  screen and (max-width:800px) {
+            .card{
+                padding: 0 120px;
+                font-size: 2.5vw;
+            }
+            h1{
+                font-size: 5vw;
+            }
+            #pfp{
+                width: 30vw;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="pfp">
+            <img id="pfp" src="pfp.png" alt="pfp">
+        </div>
+        <h1>T Z U I Y</h1>
+        <p>𝘊 '𝘦𝘴𝘵 𝘭𝘢 𝘷𝘪𝘦</p>
+        <div class="About">
+            <p id="about">
+                I love cats, sleep, and music. Bye :)
+            </p>
+        </div>
+        <!-- <div class="links">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </div>
+    </div> -->
+</body>
+</html>
