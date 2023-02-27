@@ -21,6 +21,7 @@
             width: 100%;
             display: grid;
             place-content: center;
+            transform: translateY(-5vh);
         }
         .card{
             aspect-ratio: 1/1;
@@ -31,7 +32,7 @@
             border: #9d9d9d solid;
             font-family: 'Source Sans Pro', sans-serif;
             border-radius: 10px;
-            padding: 0px 180px;
+            padding: 100px 180px;
             /* padding-block: 100px; */
             opacity: 0;
             filter: blur(10px);
@@ -43,12 +44,13 @@
         }
         .card:hover{
             cursor:default;
-            padding: 200px 300px;
+            padding: 150px 300px; 
         }
         .pfp{
             display: grid;
             place-content: center;
-            transform: translateY(-20px);
+            z-index: 1;
+            transform: translateY(10vh);
         }
         h1{
             font-size: 3vw;
@@ -82,8 +84,8 @@
         }
         .About{
             position: relative;
-            margin-bottom: 0px;
-            transform: translateY(3vw);
+            /* margin-bottom: 0px; */
+            /* transform: translateY(3vw); */
         }
 
         .links{
@@ -116,11 +118,17 @@
         }
         @media  screen and (max-width:800px) {
             .card{
-                padding: 0 120px;
+                padding: 80px 120px;
                 font-size: 2.5vw;
+            }
+            .card:hover{
+                padding: 180px 120px;
             }
             h1{
                 font-size: 5vw;
+            }
+            .pfp{
+                transform: translateY(8vh)
             }
             #pfp{
                 width: 30vw;
@@ -130,10 +138,11 @@
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="pfp">
+    <div class="pfp">
             <img id="pfp" src="pfp.png" alt="pfp">
         </div>
+    <div class="card">
+        
         <h1>T Z U I Y</h1>
         <p>𝘊 '𝘦𝘴𝘵 𝘭𝘢 𝘷𝘪𝘦</p>
         <div class="About">
@@ -151,7 +160,7 @@
             <li>
                 <a href="">Contact</a>
             </li>
-        </div>
-    </div> -->
+        </div>-->
+    </div> 
 </body>
 </html>
